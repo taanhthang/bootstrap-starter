@@ -12,6 +12,10 @@ DB.connect(app).then()
             produkt.beschreibung = beschreibung;
             produkt.save();
         }
+        var produktBild = new DB.produktBild;
+        {
+
+        }
 
 
 
