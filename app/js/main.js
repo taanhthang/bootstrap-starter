@@ -1,25 +1,30 @@
 var app = 'thabefrijo';
 DB.connect(app).then()
 {
-    function setProdukt(name,artist,preis,collektion,beschreibung)
+    function setProdukt(produktid,name,artist,preis,collektion,kategory,beschreibung)
     {
         var produkt = new DB.produkt;
         {
+            produkt.produktid = produktid;
             produkt.name = name;
             produkt.artist = artist;
             produkt.preis = preis;
             produkt.collektion =collektion;
             produkt.beschreibung = beschreibung;
+            produkt.kategory= kategory;
+
             produkt.save();
         }
-        var produktBild = new DB.produktBild;
-        {
 
-        }
+
+
+
 
 
 
     }
+
+
 }
 
 
