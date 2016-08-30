@@ -9,13 +9,16 @@
                 <img id= "leftphoto" src="http://pics4.esprit.de/Shop/PicSPV_ZoomSide/096EO1F013_110.jpg" alt="First slide">
             </div>
             <div class="leftphoto">
-                <img id= "leftphoto" src="http://pics4.esprit.de/Shop/PicSPV_ZoomSecondView/096EO1F013_110.jpg" alt="First slide">
+                <img id= "leftphoto" src="http://pics4.esprit.de/Shop/PicSPV_ZoomFlat/096EO1F013_110.jpg" alt="First slide">
             </div>
         </td>
         <td>
 
                 <div class="midphoto">
-                    <img id="midphoto"src="http://pics4.esprit.de/Shop/PicSPV_ZoomMainView/096EO1F013_110.jpg" alt="First slide">
+                    <img src="http://pics4.esprit.de/Shop/PicSPV_ZoomMainView/096EO1F013_110.jpg"
+                         onmouseover="func1(this);"
+                         onmouseout="func2(this);"
+                    />
                 </div>
 
 
@@ -34,16 +37,20 @@
 
 
             <div id = "button1">
-                <ul id="dropdown">
-                    <ol class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><button id="button11"class="btn  " >Größe</button> </a>
-                        <ol id class="dropdown-menu">
 
-                            <li><a href="#">XS</a></li>
-                            <li><a href="#">S</a></li>
-                            <li><a href="#">M</a></li>
-                            <li><a href="#">L</a></li>
-                            <li><a href="#">XL</a></li>
-                        </ol>
+                <ul>
+
+                    <ol>
+                        <p id = "Groesse"><strong>Größe</strong></p>
+                        <select name="size">
+                            <option value="Wählen"><strong>Wählen</strong></option>
+                            <option value="XS">XS</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+
                     </ol>
                 </ul>
             </div>
@@ -53,7 +60,7 @@
                 </div></h3>
             <h3>
                 <div id ="button3">
-                    <button id ="button31" type="button" class="btn  "><strong>Wunschzettel        </strong></button>
+                    <button id ="button31" type="button" class="btn  "><strong>Wunschzettel</strong></button>
                 </div></h3>
             </div>
 
@@ -68,4 +75,7 @@
         </p></td>
     </tr>
 </table>
+
+
+
 
