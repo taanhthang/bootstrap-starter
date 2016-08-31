@@ -22,7 +22,12 @@ DB.connect(app).then()
 
 
 
+
     }
+        DB.produkt.find()
+        .equal('kategory', DB.produkt.hose) //any other User reference is also valid here
+        .resultList(hosen)
+
 
 }
 
