@@ -24,7 +24,6 @@ DB.connect(app).then()
 
     }
 
-
 }
 
 
