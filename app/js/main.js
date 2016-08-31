@@ -1,33 +1,43 @@
 var app = 'thabefrijo';
 DB.connect(app).then()
 {
-    function setProdukt(produktid,name,artist,preis,collektion,kategory,beschreibung)
-    {
+    function setProdukt(produktid, name, artist, preis, collektion, kategory, bild, beschreibung) {
         var produkt = new DB.produkt;
         {
             produkt.produktid = produktid;
             produkt.name = name;
             produkt.artist = artist;
             produkt.preis = preis;
-            produkt.collektion =collektion;
+            produkt.collektion = collektion;
             produkt.beschreibung = beschreibung;
-            produkt.kategory= kategory;
+            produkt.bild = bild;
+            produkt.kategory = kategory;
 
             produkt.save();
         }
 
-
-
-
-
-
-
-
     }
-        DB.produkt.find()
-        .equal('kategory', DB.produkt.hose) //any other User reference is also valid here
-        .resultList(hosen)
 
+    DB.produkt.find().resultList(function (result) {
+        result.forEach(function (produkt) {
+            console.log(produkt.name);
+        });
+    });
+    function sortbyKollektion(collektion) {
+
+
+
+    DB.produkt.find()
+
+        .equal('collektion', collektion)
+        .ascending('name')
+        .resultList(function (result) {
+            result.forEach(function (produkt) {
+                var collektionList = [produkt.name];
+                console.log(collektionList)
+            });
+        });
+}
 
 }
 
