@@ -1,88 +1,96 @@
-.midphoto
+
+input[name='slide_switch']
 {
-    margin-left : 30px;
-    margin-bottom: 10px ;
+  display: none;
+}
+.slider label
+{
+  margin: 18px 0 0 18px;
+  border: 3px solid #999;
+  cursor : pointer;
+  opacity: .6;
+  transition: all .3s;
+}
 
-
-    border-radius: 10px;
-    background-position: center center;
-    background-size: cover
+.slider input[name='slide_switch']:checked + label
+{
+  opacity: 1;
+  border-color: #666;
+}
+.slider input[name='slide_switch']~ img
+{
+  opacity: 0;
+  -webkit-transform: scale(1,1);
+  transform: scale(1.1)
+}
+.slider input[name='slide_switch']:checked +label+img{
+  opacity:1;
+  -webkit-transform: (1);
+  transform : scale(1);
 
 }
-.midphoto:hover{
-    transform:scale(1.2) ;
-}
+
 #button1
 {
-    margin-left: 0px;
+  margin-left: 0px;
 }
-    #Groesse
-    {
-        margin-left: 5px ;
-        margin-bottom: -2px;
-    }
-#button11
-
+#Groesse
 {
-    color: black;
-    background-color: #e7e7e7;
-    padding-right: 33px;
+  margin-left: 5px ;
+  margin-bottom: -2px;
+}
+#button11
+{
+  color: black;
+  background-color: #e7e7e7;
+  padding-right: 33px;
 }
 #button2
 {
-    margin-left:79px;
+  margin-left:79px;
 }
 
 #button3
 {
-    margin-left:79px;
+  margin-left:79px;
 }
 #button21
-
 {
-    color: white;
-    background-color:#e7e7e7 ;
-    padding-right: 39px;
+  color: white;
+  background-color:#e7e7e7 ;
+  padding-right: 39px;
 }
 #button31
-
 { color: black;
-    background-color: #e7e7e7;
-    padding-right: 39px;
+  background-color: #e7e7e7;
+  padding-right: 39px;
 }
-#leftphoto1
+.grad
 {
-    width: 130px;
-    height: 170px;
-    margin-bottom: 10px;
+  margin-bottom: 30px;
+  width:20px;
+  height:20px;
+  border-radius:50px;
+  background:linear-gradient(to bottom, #FF0000 , #FF0000 )
 }
-#leftphoto2
+#id111
 {
-    width: 130px;
-    height: 170px;
-    margin-bottom: 10px;
+  width: 301px;
+  height: 450px;
 }
-#leftphoto3
+.slider
 {
-    width: 130px;
-    height: 170px;
-    margin-bottom: 10px;
-}
-.leftphoto
-{
-    margin-left: 100px;
-}
-.kreis
-{
-    margin-left:79px;
-    margin-bottom: 30px;
-    width:20px;
-    height:20px;
-    border-radius:50px;
-    background:linear-gradient(to bottom, #FF0000 , #FF0000 )
-}
+  height: 640px;
+  position: relative;
 
-.contain{
-
-    margin-bottom: -10px;
+}
+.slider>img
+{
+  position:absolute;
+  top: 0px;
+  left: 50px;
+}
+#id22
+{
+  margin-top: 60px;
 }
