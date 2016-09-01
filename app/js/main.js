@@ -1,6 +1,8 @@
 var app = 'thabefrijo';
-DB.connect(app).then()
-{
+DB.connect(app).then(function() {
+
+});
+
     function setProdukt(produktid, name, artist, preis, collektion, kategory, bild, beschreibung) {
         var produkt = new DB.produkt;
         {
@@ -23,23 +25,25 @@ DB.connect(app).then()
             console.log(produkt.name);
         });
     });
-    function sortbyKollektion(collektion) {
 
 
 
-    DB.produkt.find()
+    DB.ready().then(function() {
+        DB.produkt.find()
 
-        .equal('collektion', collektion)
-        .ascending('name')
-        .resultList(function (result) {
-            result.forEach(function (produkt) {
-                var collektionList = [produkt.name];
-                console.log(collektionList)
+            .equal('collektion', /sommer/)
+            .ascending('name')
+            .resultList(function (result) {
+                result.forEach(function (produkt) {
+                    var collektionList = [produkt.name];
+                    console.log(collektionList)
+                });
             });
-        });
-}
+    });
 
-}
+
+
+
 
 
 
