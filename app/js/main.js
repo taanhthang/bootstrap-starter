@@ -51,33 +51,3 @@ DB.connect(app).then()
  $(this).hide(1000);})
  });
  */
-
-var divMoreInfo = null;
-
-Init();
-
-function Init()
-{
-    divMoreInfo = document.getElementById("divMoreInfo");
-}
-
-function func1(obj)
-{
-    obj.style.width = "450px";
-    obj.style.height = "660px";
-
-    divMoreInfo.style.left = (obj.offsetLeft + 280) + "px";
-    divMoreInfo.style.top = obj.offsetTop + "px";
-
-    divMoreInfo.style.display = "";
-    divMoreInfo.style.visibility = "visible";
-}
-
-function func2(obj)
-{
-    obj.style.width = "256px";
-    obj.style.height = "356px";
-
-    divMoreInfo.style.display = "none";
-    divMoreInfo.style.visibility = "hidden";
-}
