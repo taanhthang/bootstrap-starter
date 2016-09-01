@@ -3,9 +3,10 @@ DB.connect(app).then(function() {
 
 });
 
-    function setProdukt(produktid, name, artist, preis, collektion, kategory, bild, beschreibung) {
+    function setProdukt(produktid, name, artist, preis, collektion, kategory, bild, beschreibung)
+    {
         var produkt = new DB.produkt;
-        {
+
             produkt.produktid = produktid;
             produkt.name = name;
             produkt.artist = artist;
@@ -14,9 +15,8 @@ DB.connect(app).then(function() {
             produkt.beschreibung = beschreibung;
             produkt.bild = bild;
             produkt.kategory = kategory;
-
             produkt.save();
-        }
+
 
     }
 
@@ -26,21 +26,32 @@ DB.connect(app).then(function() {
         });
     });
 
+   function sortiere(atr,atr2) {
 
 
-    DB.ready().then(function() {
+       var Somm = new Array;
+
+       DB.produkt.find()
+           .equal(atr, atr2)
+           .resultList(function (result) {
+               result.forEach(function (produkt)
+               {
+                   Somm.push(produkt.produktid);
+                   console.log(Somm)
+               });
+           });
+   }
+
+
+    function getpreis(id)
+    {
         DB.produkt.find()
-
-            .equal('collektion', /sommer/)
-            .ascending('name')
-            .resultList(function (result) {
-                result.forEach(function (produkt) {
-                    var collektionList = [produkt.name];
-                    console.log(collektionList)
-                });
+            .equal("produktid",id)
+            .singleResult(function (produkt)
+            {
+                console.log(produkt.preis);
             });
-    });
-
+    }
 
 
 
