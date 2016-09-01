@@ -23,9 +23,10 @@ function sortdivTops() {
     });
     for (var i = 0; i < sortMe.length; i++) {
         container.appendChild(sortMe[i][1]);
-        hideshow(document.getElementById('-2'));
-        hideshow(document.getElementById('-3'));
-        hideshow(document.getElementById('-4'));
+        showall();
+        hide(document.getElementById('-2'));
+        hide(document.getElementById('-3'));
+        hide(document.getElementById('-4'));
 
     }
 
@@ -56,9 +57,10 @@ function sortdivShirt() {
     });
     for (var i = 0; i < sortMe.length; i++) {
         container.appendChild(sortMe[i][1]);
-        hideshow(document.getElementById('-1'));
-        hideshow(document.getElementById('-3'));
-        hideshow(document.getElementById('-4'));
+        showall();
+        hide(document.getElementById('-1'));
+        hide(document.getElementById('-3'));
+        hide(document.getElementById('-4'));
 
     }
 
@@ -90,9 +92,10 @@ function sortdivPullover() {
     });
     for (var i = 0; i < sortMe.length; i++) {
         container.appendChild(sortMe[i][1]);
-        hideshow(document.getElementById('-1'));
-        hideshow(document.getElementById('-2'));
-        hideshow(document.getElementById('-4'));
+        showall();
+        hide(document.getElementById('-1'));
+        hide(document.getElementById('-2'));
+        hide(document.getElementById('-4'));
 
     }
 
@@ -123,9 +126,11 @@ function sortdivJacken() {
     });
     for (var i = 0; i < sortMe.length; i++) {
         container.appendChild(sortMe[i][1]);
-        hideshow(document.getElementById('-1'));
-        hideshow(document.getElementById('-2'));
-        hideshow(document.getElementById('-3'));
+        showall();
+        hide(document.getElementById('-1'));
+        hide(document.getElementById('-2'));
+        hide(document.getElementById('-3'));
+
 
     }
 
@@ -146,7 +151,7 @@ function sorthideJacken(){
  });*/
 
 /*hide Function */
-function hideshow(which) {
+function hide(which) {
 
     if (!document.getElementById)
     {
@@ -158,7 +163,23 @@ function hideshow(which) {
     }
 
     else {
+
         which.style.display = "block"
+
+    }
+}
+
+function show(which){
+    if (!document.getElementById)
+    {
+        return;
     }
 
+    which.style.display = "block"
+}
+function showall(){
+    show(document.getElementById('-1'));
+    show(document.getElementById('-2'));
+    show(document.getElementById('-3'));
+    show(document.getElementById('-4'));
 }
