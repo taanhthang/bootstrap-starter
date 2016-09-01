@@ -82,6 +82,7 @@ function func2(obj)
     divMoreInfo.style.visibility = "hidden";
 }
 
+
 /* Webshop*/
 
 function sortdiv() {
@@ -106,11 +107,11 @@ function sortdiv() {
 
 
     /*Alternative Sort-function
-    var main = document.getElementById( 'list' );
+     var main = document.getElementById( 'list' );
 
-    [].map.call( main.children, Object ).sort( function ( a, b ) {
-        return +a.id.match( /\d+/ ) - +b.id.match( /\d+/ );
-    }).forEach( function ( elem ) {
-        main.appendChild( elem );
-    });*/
+     [].map.call( main.children, Object ).sort( function ( a, b ) {
+     return +a.id.match( /\d+/ ) - +b.id.match( /\d+/ );
+     }).forEach( function ( elem ) {
+     main.appendChild( elem );
+     });*/
 }
