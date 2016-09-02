@@ -141,15 +141,6 @@ function sorthideJacken(){
     sortdivJacken();
 }
 
-/*Alternative Sort-function
- var main = document.getElementById( 'list' );
-
- [].map.call( main.children, Object ).sort( function ( a, b ) {
- return +a.id.match( /\d+/ ) - +b.id.match( /\d+/ );
- }).forEach( function ( elem ) {
- main.appendChild( elem );
- });*/
-
 /*hide Function */
 function hide(which) {
 
