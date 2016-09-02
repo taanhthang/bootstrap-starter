@@ -8,11 +8,11 @@
             <p id = "Collectionwählen"><strong>Sort by Collection</strong></p>
             <select name="collection">
                 <option value="Wählen"><strong>Wählen</strong></option>
-                <option value="A">Collection A</option>
-                <option value="B">collection B</option>
-                <option value="C">Collection C</option>
-                <option value="D">Collection D</option>
-                <option value="E">Collection E</option>
+                <option value="A" onclick="sorthideCA();">Collection A</option>
+                <option value="B" onclick="sorthideCB();">Collection B</option>
+                <option value="C" onclick="sorthideCC();">Collection C</option>
+                <option value="D" onclick="sorthideCD();">Collection D</option>
+                <option value="E" onclick="sorthideCE();">Collection E</option>
             </select>
 
         </ol>
@@ -20,115 +20,111 @@
 </div>
 
 <!-- Zur Zeit 3 Reihen a 3 Artist -->
-<div class="row artistListAnsicht" >
-    <div class="aArtist col-md-12">
+<div id="listA" >
+    <div id="-1" class="aArtist col-md-12">
         <a class="thumbnail" href="/artistAnsicht.html">
             <!-- Einbindung des Bildes : hier Bsp link aus dem web-->
             <img  src="http://digitalmofo.com/wp-content/plugins/rss-poster/cache/7947b_logo-example.jpg" >
             <div class="wrapper">
                 <div class="caption artistName">
                     <!-- wird auf Logobild gelegt-->
-                    <span>Artist</span>
+                    <span>Artist CA</span>
                 </div>
             </div>
         </a>
     </div>
-    <div class="aArtist col-md-12">
+    <div id="-2"class="aArtist col-md-12">
         <a class="thumbnail" href="/artistAnsicht.html">
             <!-- Einbindung des Bildes : hier Bsp link aus dem web-->
             <img  src="http://digitalmofo.com/wp-content/plugins/rss-poster/cache/7947b_logo-example.jpg" >
             <div class="wrapper">
                 <div class="caption artistName">
                     <!-- wird auf Logobild gelegt-->
-                    <span>Artist</span>
+                    <span>Artist CB</span>
                 </div>
             </div>
         </a>
     </div>
-    <div class="aArtist col-md-12">
+    <div id="-4" class="aArtist col-md-12">
         <a class="thumbnail" href="/artistAnsicht.html">
             <!-- Einbindung des Bildes : hier Bsp link aus dem web-->
             <img  src="http://digitalmofo.com/wp-content/plugins/rss-poster/cache/7947b_logo-example.jpg" >
             <div class="wrapper">
                 <div class="caption artistName">
                     <!-- wird auf Logobild gelegt-->
-                    <span>Artist</span>
+                    <span>Artist CD</span>
                 </div>
             </div>
         </a>
     </div>
-</div>
-<div class="row artistListAnsicht" >
-    <div class="aArtist col-md-12">
+    <div id="-3" class="aArtist col-md-12">
         <a class="thumbnail" href="/artistAnsicht.html">
             <!-- Einbindung des Bildes : hier Bsp link aus dem web-->
             <img  src="http://digitalmofo.com/wp-content/plugins/rss-poster/cache/7947b_logo-example.jpg" >
             <div class="wrapper">
                 <div class="caption artistName">
                     <!-- wird auf Logobild gelegt-->
-                    <span>Artist</span>
+                    <span>Artist CC</span>
                 </div>
             </div>
         </a>
     </div>
-    <div class="aArtist col-md-12">
+    <div id="-5" class="aArtist col-md-12">
         <a class="thumbnail" href="/artistAnsicht.html">
             <!-- Einbindung des Bildes : hier Bsp link aus dem web-->
             <img  src="http://digitalmofo.com/wp-content/plugins/rss-poster/cache/7947b_logo-example.jpg" >
             <div class="wrapper">
                 <div class="caption artistName">
                     <!-- wird auf Logobild gelegt-->
-                    <span>Artist</span>
+                    <span>Artist CE</span>
                 </div>
             </div>
         </a>
     </div>
-    <div class="aArtist col-md-12">
+    <div id="-3"class="aArtist col-md-12">
         <a class="thumbnail" href="/artistAnsicht.html">
             <!-- Einbindung des Bildes : hier Bsp link aus dem web-->
             <img  src="http://digitalmofo.com/wp-content/plugins/rss-poster/cache/7947b_logo-example.jpg" >
             <div class="wrapper">
                 <div class="caption artistName">
                     <!-- wird auf Logobild gelegt-->
-                    <span>Artist</span>
+                    <span>Artist CC</span>
                 </div>
             </div>
         </a>
     </div>
-</div>
-<div class="row artistListAnsicht" >
-    <div class="aArtist col-md-12">
+    <div id="-2"class="aArtist col-md-12">
         <a class="thumbnail" href="/artistAnsicht.html">
             <!-- Einbindung des Bildes : hier Bsp link aus dem web-->
             <img  src="http://digitalmofo.com/wp-content/plugins/rss-poster/cache/7947b_logo-example.jpg" >
             <div class="wrapper">
                 <div class="caption artistName">
                     <!-- wird auf Logobild gelegt-->
-                    <span>Artist</span>
+                    <span>Artist CB</span>
                 </div>
             </div>
         </a>
     </div>
-    <div class="aArtist col-md-12">
+    <div id="-1"class="aArtist col-md-12">
         <a class="thumbnail" href="/artistAnsicht.html">
             <!-- Einbindung des Bildes : hier Bsp link aus dem web-->
             <img  src="http://digitalmofo.com/wp-content/plugins/rss-poster/cache/7947b_logo-example.jpg" >
             <div class="wrapper">
                 <div class="caption artistName">
                     <!-- wird auf Logobild gelegt-->
-                    <span>Artist</span>
+                    <span>Artist CA</span>
                 </div>
             </div>
         </a>
     </div>
-    <div class="aArtist col-md-12">
+    <div id="-4" class="aArtist col-md-12">
         <a class="thumbnail" href="/artistAnsicht.html">
             <!-- Einbindung des Bildes : hier Bsp link aus dem web-->
             <img  src="http://digitalmofo.com/wp-content/plugins/rss-poster/cache/7947b_logo-example.jpg" >
             <div class="wrapper">
                 <div class="caption artistName">
                     <!-- wird auf Logobild gelegt-->
-                    <span>Artist</span>
+                    <span>Artist CD</span>
                 </div>
             </div>
         </a>
