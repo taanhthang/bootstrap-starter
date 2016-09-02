@@ -26,7 +26,7 @@ DB.connect(app).then(function() {
         });
     });
 
-   function ladeRunter(atr,atr2) {
+   function ladeRunter() {
 
 
        var idList = [];
@@ -36,15 +36,17 @@ DB.connect(app).then(function() {
 
 
        DB.produkt.find()
-           .equal(atr, atr2)
-           .resultList(function(result) {
+           .ascending("collektion")
+           .resultList(function(result)
+           {
                result.forEach(function (produkt)
                {
                    idList.push(produkt.produktid);
                    artistList.push(produkt.artist);
                    preisList.push(produkt.preis);
                    nameList.push(produkt.name);
-                   console.log(idList,artistList,preisList,nameList);
+                   return idList, artistList, preisList,nameList
+
 
                });
            });
