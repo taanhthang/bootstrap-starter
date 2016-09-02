@@ -26,18 +26,26 @@ DB.connect(app).then(function() {
         });
     });
 
-   function sortiere(atr,atr2) {
+   function ladeRunter(atr,atr2) {
 
 
-       var Somm = new Array;
+       var idList = [];
+       var artistList = [];
+       var preisList = [];
+       var nameList = [];
+
 
        DB.produkt.find()
            .equal(atr, atr2)
-           .resultList(function (result) {
+           .resultList(function(result) {
                result.forEach(function (produkt)
                {
-                   Somm.push(produkt.produktid);
-                   console.log(Somm)
+                   idList.push(produkt.produktid);
+                   artistList.push(produkt.artist);
+                   preisList.push(produkt.preis);
+                   nameList.push(produkt.name);
+                   console.log(idList,artistList,preisList,nameList);
+
                });
            });
    }
