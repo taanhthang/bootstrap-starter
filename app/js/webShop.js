@@ -32,10 +32,7 @@ function sortdivTops() {
 
 }
 
-function sorthideTops(){
-    sortdivTops();
-    sortdivTops();
-}
+
 /* SortShirt id"-2", alle Id by hide müssen vergeben sein*/
 function sortdivShirt() {
 
@@ -66,10 +63,6 @@ function sortdivShirt() {
 
 }
 
-function sorthideShirt(){
-    sortdivShirt();
-    sortdivShirt();
-}
 
 /* SortPullover id"-3", alle Id by hide müssen vergeben sein*/
 function sortdivPullover() {
@@ -101,10 +94,6 @@ function sortdivPullover() {
 
 }
 
-function sorthidePullover(){
-    sortdivPullover();
-    sortdivPullover();
-}
 /* SortJacken id"-4", alle Id by hide müssen vergeben sein*/
 function sortdivJacken() {
 
@@ -134,11 +123,6 @@ function sortdivJacken() {
 
     }
 
-}
-
-function sorthideJacken(){
-    sortdivJacken();
-    sortdivJacken();
 }
 
 /*hide Function */
