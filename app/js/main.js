@@ -6,8 +6,7 @@ DB.connect(app).then(function() {
     function setProdukt(produktid, name, artist, preis, collektion, kategory, bild,groesse,imbestand, beschreibung)
     {
         var produkt = new DB.produkt;
-
-            produkt.produktid = produktid;
+            produkt.id = produktid;
             produkt.name = name;
             produkt.artist = artist;
             produkt.preis = preis;
@@ -27,6 +26,16 @@ DB.connect(app).then(function() {
             console.log(produkt.name);
         });
     });
+function aendern(id,kat,atr) {
+
+    DB.produkt.load(id).then(function(produkt) {
+        produkt.kat = atr;
+        produkt.update({force: true}).then(function() {
+            //the todo was successfully persisted
+        });
+    });
+
+}
 
    function ladeRunter() {
 
