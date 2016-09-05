@@ -3,7 +3,7 @@ DB.connect(app).then(function() {
 
 });
 
-    function setProdukt(produktid, name, artist, preis, collektion, kategory, bild, beschreibung)
+    function setProdukt(produktid, name, artist, preis, collektion, kategory, bild,groesse,imbestand, beschreibung)
     {
         var produkt = new DB.produkt;
 
@@ -15,6 +15,8 @@ DB.connect(app).then(function() {
             produkt.beschreibung = beschreibung;
             produkt.bild = bild;
             produkt.kategory = kategory;
+            produkt.groesse = groesse;
+            produkt.imbestand=imbestand;
             produkt.save();
 
 
