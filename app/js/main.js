@@ -3,11 +3,10 @@ DB.connect(app).then(function() {
 
 });
 
-    function setProdukt(produktid, name, artist, preis, collektion, kategory, bild, beschreibung)
+    function setProdukt(produktid, name, artist, preis, collektion, kategory, bild,groesse,imbestand, beschreibung)
     {
         var produkt = new DB.produkt;
-
-            produkt.produktid = produktid;
+            produkt.id = produktid;
             produkt.name = name;
             produkt.artist = artist;
             produkt.preis = preis;
@@ -15,6 +14,8 @@ DB.connect(app).then(function() {
             produkt.beschreibung = beschreibung;
             produkt.bild = bild;
             produkt.kategory = kategory;
+            produkt.groesse = groesse;
+            produkt.imbestand=imbestand;
             produkt.save();
 
 
@@ -25,8 +26,18 @@ DB.connect(app).then(function() {
             console.log(produkt.name);
         });
     });
+function aendern(id,kat,atr) {
 
-   function ladeRunter(atr,atr2) {
+    DB.produkt.load(id).then(function(produkt) {
+        produkt.kat = atr;
+        produkt.update({force: true}).then(function() {
+            //the todo was successfully persisted
+        });
+    });
+
+}
+
+   function ladeRunter() {
 
 
        var idList = [];
@@ -36,15 +47,17 @@ DB.connect(app).then(function() {
 
 
        DB.produkt.find()
-           .equal(atr, atr2)
-           .resultList(function(result) {
+           .ascending("collektion")
+           .resultList(function(result)
+           {
                result.forEach(function (produkt)
                {
                    idList.push(produkt.produktid);
                    artistList.push(produkt.artist);
                    preisList.push(produkt.preis);
                    nameList.push(produkt.name);
-                   console.log(idList,artistList,preisList,nameList);
+                   return idList, artistList, preisList,nameList
+
 
                });
            });

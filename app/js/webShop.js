@@ -2,7 +2,7 @@
  * Created by Imperia on 01.09.2016.
  */
 /* Webshop*/
-/* SortTops id"-1", alle Id by hide müssen vergeben sein*/
+/* SortTops id"-1", show id am ende */
 function sortdivTops() {
 
     var container = document.getElementById("list");
@@ -24,18 +24,14 @@ function sortdivTops() {
     for (var i = 0; i < sortMe.length; i++) {
         container.appendChild(sortMe[i][1]);
         showall();
-        hide(document.getElementById('-2'));
-        hide(document.getElementById('-3'));
-        hide(document.getElementById('-4'));
+        hideall();
+        show(document.getElementById('-1'));
 
     }
 
 }
 
-function sorthideTops(){
-    sortdivTops();
-    sortdivTops();
-}
+
 /* SortShirt id"-2", alle Id by hide müssen vergeben sein*/
 function sortdivShirt() {
 
@@ -58,18 +54,12 @@ function sortdivShirt() {
     for (var i = 0; i < sortMe.length; i++) {
         container.appendChild(sortMe[i][1]);
         showall();
-        hide(document.getElementById('-1'));
-        hide(document.getElementById('-3'));
-        hide(document.getElementById('-4'));
-
+        hideall();
+        show(document.getElementById('-2'));
     }
 
 }
 
-function sorthideShirt(){
-    sortdivShirt();
-    sortdivShirt();
-}
 
 /* SortPullover id"-3", alle Id by hide müssen vergeben sein*/
 function sortdivPullover() {
@@ -93,18 +83,12 @@ function sortdivPullover() {
     for (var i = 0; i < sortMe.length; i++) {
         container.appendChild(sortMe[i][1]);
         showall();
-        hide(document.getElementById('-1'));
-        hide(document.getElementById('-2'));
-        hide(document.getElementById('-4'));
-
+        hideall();
+        show(document.getElementById('-3'));
     }
 
 }
 
-function sorthidePullover(){
-    sortdivPullover();
-    sortdivPullover();
-}
 /* SortJacken id"-4", alle Id by hide müssen vergeben sein*/
 function sortdivJacken() {
 
@@ -127,18 +111,12 @@ function sortdivJacken() {
     for (var i = 0; i < sortMe.length; i++) {
         container.appendChild(sortMe[i][1]);
         showall();
-        hide(document.getElementById('-1'));
-        hide(document.getElementById('-2'));
-        hide(document.getElementById('-3'));
+        hideall();
+        show(document.getElementById('-4'));
 
 
     }
 
-}
-
-function sorthideJacken(){
-    sortdivJacken();
-    sortdivJacken();
 }
 
 /*hide Function */
@@ -168,9 +146,15 @@ function show(which){
 
     which.style.display = "block"
 }
+
 function showall(){
-    show(document.getElementById('-1'));
-    show(document.getElementById('-2'));
-    show(document.getElementById('-3'));
-    show(document.getElementById('-4'));
+    for(var i=1;i<5;i++) {
+        show(document.getElementById('-'+[i]));
+    }
+
+}
+function hideall(){
+    for(var i=1;i<5;i++) {
+        hide(document.getElementById('-'+[i]));
+    }
 }
