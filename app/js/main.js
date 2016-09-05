@@ -44,19 +44,21 @@ function aendern(id,kat,atr) {
        var artistList = [];
        var preisList = [];
        var nameList = [];
+       var bildList = [];
 
 
        DB.produkt.find()
-           .ascending("collektion")
+           .ascending("id")
            .resultList(function(result)
            {
                result.forEach(function (produkt)
                {
-                   idList.push(produkt.produktid);
+                  /* idList.push(produkt.produktid);
                    artistList.push(produkt.artist);
                    preisList.push(produkt.preis);
                    nameList.push(produkt.name);
-                   return idList, artistList, preisList,nameList
+                   bildList.push(produkt.bild); */
+                   console.log(result);
 
 
                });
