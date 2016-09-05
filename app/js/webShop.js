@@ -146,18 +146,15 @@ function show(which){
 
     which.style.display = "block"
 }
+
 function showall(){
-    show(document.getElementById('-1'));
-    show(document.getElementById('-2'));
-    show(document.getElementById('-3'));
-    show(document.getElementById('-4'));
+    for(var i=1;i<5;i++) {
+        show(document.getElementById('-'+[i]));
+    }
+
 }
-
 function hideall(){
-
-    hide(document.getElementById('-1'));
-    hide(document.getElementById('-2'));
-    hide(document.getElementById('-3'));
-    hide(document.getElementById('-4'));
-
+    for(var i=1;i<5;i++) {
+        hide(document.getElementById('-'+[i]));
+    }
 }

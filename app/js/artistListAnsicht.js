@@ -23,20 +23,14 @@ function sortdivCA() {
     for (var i = 0; i < sortMe.length; i++) {
         container.appendChild(sortMe[i][1]);
         showallA();
-        hide(document.getElementById('-2'));
-        hide(document.getElementById('-3'));
-        hide(document.getElementById('-4'));
-        hide(document.getElementById('-5'));
+        hideallA();
+        show(document.getElementById('-1'));
 
 
     }
 
 }
 
-function sorthideCA(){
-    sortdivCA();
-    sortdivCA();
-}
 function sortdivCB() {
 
     var container = document.getElementById("listA");
@@ -58,20 +52,14 @@ function sortdivCB() {
     for (var i = 0; i < sortMe.length; i++) {
         container.appendChild(sortMe[i][1]);
         showallA();
-        hide(document.getElementById('-1'));
-        hide(document.getElementById('-3'));
-        hide(document.getElementById('-4'));
-        hide(document.getElementById('-5'));
+        hideallA();
+        show(document.getElementById('-2'));
 
 
     }
 
 }
 
-function sorthideCB(){
-    sortdivCB();
-    sortdivCB();
-}
 function sortdivCC() {
 
     var container = document.getElementById("listA");
@@ -93,20 +81,14 @@ function sortdivCC() {
     for (var i = 0; i < sortMe.length; i++) {
         container.appendChild(sortMe[i][1]);
         showallA();
-        hide(document.getElementById('-1'));
-        hide(document.getElementById('-2'));
-        hide(document.getElementById('-4'));
-        hide(document.getElementById('-5'));
+        hideallA();
+        show(document.getElementById('-3'));
 
 
     }
 
 }
 
-function sorthideCC(){
-    sortdivCC();
-    sortdivCC();
-}
 function sortdivCD() {
 
     var container = document.getElementById("listA");
@@ -128,19 +110,12 @@ function sortdivCD() {
     for (var i = 0; i < sortMe.length; i++) {
         container.appendChild(sortMe[i][1]);
         showallA();
-        hide(document.getElementById('-1'));
-        hide(document.getElementById('-2'));
-        hide(document.getElementById('-3'));
-        hide(document.getElementById('-5'));
+        hideallA();
+        show(document.getElementById('-4'));
 
 
     }
 
-}
-
-function sorthideCD(){
-    sortdivCD();
-    sortdivCD();
 }
 
 function sortdivCE() {
@@ -164,10 +139,8 @@ function sortdivCE() {
     for (var i = 0; i < sortMe.length; i++) {
         container.appendChild(sortMe[i][1]);
         showallA();
-        hide(document.getElementById('-1'));
-        hide(document.getElementById('-2'));
-        hide(document.getElementById('-3'));
-        hide(document.getElementById('-4'));
+        hideallA();
+        show(document.getElementById('-5'));
 
 
 
@@ -175,17 +148,14 @@ function sortdivCE() {
 
 }
 
-function sorthideCE(){
-    sortdivCE();
-    sortdivCE();
-}
-
-
 function showallA(){
-    show(document.getElementById('-1'));
-    show(document.getElementById('-2'));
-    show(document.getElementById('-3'));
-    show(document.getElementById('-4'));
-    show(document.getElementById('-5'));
+    for(var i=1;i<6;i++) {
+        show(document.getElementById('-'+[i]));
+    }
 
+}
+function hideallA(){
+     for(var i=1;i<6;i++) {
+         hide(document.getElementById('-'+[i]));
+     }
 }
