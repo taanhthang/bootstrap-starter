@@ -37,7 +37,7 @@ DB.ready(function ()
         $('#list')
             .append(" <div id='" + idList + "'style='Display:block;'>"+
             "<div class='aProdukt col-md-12'>"+
-            "<a class='thumbnail' href='/produktAnsicht.html'onclick= localStorage.setItem('produktid','"+idList+"')>"+
+            "<a class='thumbnail' href='/produktAnsicht.html'onclick= 'localStorage.setItem('produktid','"+idList+"')'>"+
         "<img  src=  '"+bildList+"' >"+
             "<div class='wrapper'>"+
             "<div class='caption produktShopName'>"+
@@ -54,6 +54,7 @@ DB.ready(function ()
         })
     })
 });
+
 
 
 var divMoreInfo = null;
