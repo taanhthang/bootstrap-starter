@@ -23,12 +23,13 @@ function sortdivTops() {
     });
     for (var i = 0; i < sortMe.length; i++) {
         container.appendChild(sortMe[i][1]);
-        showall();
-        hideall();
-        show(document.getElementById('-1'));
-
+        }
+    for(var j=1;j<100;j++) {
+        hide(document.getElementById('/db/produkt/'+[j] +'-2'));
+        hide(document.getElementById('/db/produkt/'+[j] +'-3'));
+        hide(document.getElementById('/db/produkt/'+[j] +'-4'));
+        show(document.getElementById('/db/produkt/'+[j] +'-1'));
     }
-
 }
 
 
@@ -53,11 +54,14 @@ function sortdivShirt() {
     });
     for (var i = 0; i < sortMe.length; i++) {
         container.appendChild(sortMe[i][1]);
-        showall();
-        hideall();
-        show(document.getElementById('-2'));
-    }
 
+    }
+    for(var j=1;j<100;j++) {
+        hide(document.getElementById('/db/produkt/'+[j] +'-1'));
+        hide(document.getElementById('/db/produkt/'+[j] +'-3'));
+        hide(document.getElementById('/db/produkt/'+[j] +'-4'));
+        show(document.getElementById('/db/produkt/'+[j] +'-2'));
+    }
 }
 
 
@@ -82,9 +86,13 @@ function sortdivPullover() {
     });
     for (var i = 0; i < sortMe.length; i++) {
         container.appendChild(sortMe[i][1]);
-        showall();
-        hideall();
-        show(document.getElementById('-3'));
+
+    }
+    for(var j=1;j<100;j++) {
+        hide(document.getElementById('/db/produkt/'+[j] +'-1'));
+        hide(document.getElementById('/db/produkt/'+[j] +'-2'));
+        hide(document.getElementById('/db/produkt/'+[j] +'-4'));
+        show(document.getElementById('/db/produkt/'+[j] +'-3'));
     }
 
 }
@@ -110,11 +118,14 @@ function sortdivJacken() {
     });
     for (var i = 0; i < sortMe.length; i++) {
         container.appendChild(sortMe[i][1]);
-        showall();
-        hideall();
-        show(document.getElementById('-4'));
 
+    }
 
+    for(var j=1;j<100;j++) {
+        hide(document.getElementById('/db/produkt/'+[j] +'-1'));
+        hide(document.getElementById('/db/produkt/'+[j] +'-2'));
+        hide(document.getElementById('/db/produkt/'+[j] +'-3'));
+        show(document.getElementById('/db/produkt/'+[j] +'-4'));
     }
 
 }
@@ -126,16 +137,7 @@ function hide(which) {
     {
         return;
     }
-
-    if (which.style.display == "block") {
         which.style.display = "none";
-    }
-
-    else {
-
-        which.style.display = "block"
-
-    }
 }
 
 function show(which){
@@ -145,16 +147,4 @@ function show(which){
     }
 
     which.style.display = "block"
-}
-
-function showall(){
-    for(var i=1;i<5;i++) {
-        show(document.getElementById('-'+[i]));
-    }
-
-}
-function hideall(){
-    for(var i=1;i<5;i++) {
-        hide(document.getElementById('-'+[i]));
-    }
 }
