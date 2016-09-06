@@ -28,10 +28,10 @@ DB.ready(function ()
         result.forEach(function (inh)
         {
             var bildList = inh.bild[0];
-            var idList = inh.id[0];
-            var artisList = inh.artist[0];
-            var namenList = inh.name[0];
-            var preisList = inh.preis[0];
+            var idList = inh.id;
+            var artisList = inh.artist;
+            var namenList = inh.name;
+            var preisList = inh.preis;
 
         $('#list')
             .append(" <div id='" + idList + "'>"+
@@ -40,7 +40,7 @@ DB.ready(function ()
         "<img  src=  '"+bildList+"' >"+
             "<div class='wrapper'>"+
             "<div class='caption produktShopName'>"+
-        "<span>"+namenList + preisList+"</span>"+
+        "<span>"+namenList+"   " + preisList+"</span>"+
         "</div>"+
         "</div>"+
         "</a>"+
