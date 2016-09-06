@@ -24,12 +24,12 @@ function sortdivTops() {
     });
     for (var i = 0; i < sortMe.length; i++) {
         container.appendChild(sortMe[i][1]);
-        }
-    for(var j=1;j<4;j++) {
-        hide(document.getElementById('/db/produkt/'+[j] +'-2'));
-        hide(document.getElementById('/db/produkt/'+[j] +'-3'));
-        hide(document.getElementById('/db/produkt/'+[j] +'-4'));
-        show(document.getElementById('/db/produkt/'+[j] +'-1'));
+    }
+    for (var j = 1; j < 4; j++) {
+        hide(document.getElementById('/db/produkt/' + [j] + '-2'));
+        hide(document.getElementById('/db/produkt/' + [j] + '-3'));
+        hide(document.getElementById('/db/produkt/' + [j] + '-4'));
+        show(document.getElementById('/db/produkt/' + [j] + '-1'));
     }
 }
 
@@ -57,11 +57,11 @@ function sortdivShirt() {
         container.appendChild(sortMe[i][1]);
 
     }
-    for(var j=1;j<4;j++) {
-        hide(document.getElementById('/db/produkt/'+[j] +'-1'));
-        hide(document.getElementById('/db/produkt/'+[j] +'-3'));
-        hide(document.getElementById('/db/produkt/'+[j] +'-4'));
-        show(document.getElementById('/db/produkt/'+[j] +'-2'));
+    for (var j = 1; j < 4; j++) {
+        hide(document.getElementById('/db/produkt/' + [j] + '-1'));
+        hide(document.getElementById('/db/produkt/' + [j] + '-3'));
+        hide(document.getElementById('/db/produkt/' + [j] + '-4'));
+        show(document.getElementById('/db/produkt/' + [j] + '-2'));
     }
 }
 
@@ -89,11 +89,11 @@ function sortdivPullover() {
         container.appendChild(sortMe[i][1]);
 
     }
-    for(var j=1;j<4;j++) {
-        hide(document.getElementById('/db/produkt/'+[j] +'-1'));
-        hide(document.getElementById('/db/produkt/'+[j] +'-2'));
-        hide(document.getElementById('/db/produkt/'+[j] +'-4'));
-        show(document.getElementById('/db/produkt/'+[j] +'-3'));
+    for (var j = 1; j < 4; j++) {
+        hide(document.getElementById('/db/produkt/' + [j] + '-1'));
+        hide(document.getElementById('/db/produkt/' + [j] + '-2'));
+        hide(document.getElementById('/db/produkt/' + [j] + '-4'));
+        show(document.getElementById('/db/produkt/' + [j] + '-3'));
     }
 
 }
@@ -122,11 +122,11 @@ function sortdivJacken() {
 
     }
 
-    for(var j=1;j<4;j++) {
-        hide(document.getElementById('/db/produkt/'+[j] +'-1'));
-        hide(document.getElementById('/db/produkt/'+[j] +'-2'));
-        hide(document.getElementById('/db/produkt/'+[j] +'-3'));
-        show(document.getElementById('/db/produkt/'+[j] +'-4'));
+    for (var j = 1; j < 4; j++) {
+        hide(document.getElementById('/db/produkt/' + [j] + '-1'));
+        hide(document.getElementById('/db/produkt/' + [j] + '-2'));
+        hide(document.getElementById('/db/produkt/' + [j] + '-3'));
+        show(document.getElementById('/db/produkt/' + [j] + '-4'));
     }
 
 }
@@ -134,27 +134,25 @@ function sortdivJacken() {
 /*hide Function */
 function hide(which) {
 
-    if (!document.getElementById)
-    {
+    if (!document.getElementById) {
         return;
     }
-    if(which.style.display == "block") {
+    if (which.style.display == "block") {
         which.style.display = "none";
     }
-    else{
+    else {
         return;
     }
 }
 
-function show(which){
-    if (!document.getElementById)
-    {
+function show(which) {
+    if (!document.getElementById) {
         return;
     }
-    if(which.style.display == "none") {
+    if (which.style.display == "none") {
         which.style.display = "block";
     }
-    else{
+    else {
         return;
     }
 }
