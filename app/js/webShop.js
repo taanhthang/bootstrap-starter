@@ -138,7 +138,9 @@ function hide(which) {
     {
         return;
     }
+    else {
         which.style.display = "none";
+    }
 }
 
 function show(which){
@@ -146,6 +148,7 @@ function show(which){
     {
         return;
     }
-
-    which.style.display = "block"
+    else {
+        which.style.display = "block"
+    }
 }
