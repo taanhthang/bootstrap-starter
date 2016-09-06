@@ -29,7 +29,7 @@ DB.ready(function ()
         {
             var bildList = inh.bild[0];
             var idList = inh.id;
-            var artisList = inh.artist;
+            var artistList = inh.artist;
             var namenList = inh.name;
             var preisList = inh.preis;
 
@@ -45,7 +45,7 @@ DB.ready(function ()
         "</div>"+
         "</a>"+
         "<a class='Lupe' href='"+bildList+"'data-lightbox='Shop:Shirt'><img src='https://thabefrijo-bq.global.ssl.fastly.net/v1/file/www/img/enlarge%20Lupe.png?BCB'/></a>"+
-        "<a href='/artistAnsicht.html'> Link to Artist</a>"+
+        "<a href='/artistAnsicht.html'> "+artistList+"</a>"+
 
         "</div>"+
             "</div>"
