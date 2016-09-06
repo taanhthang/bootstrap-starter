@@ -11,6 +11,7 @@ function sortdivTops() {
     for (var i = 0; i < elements.length; i++) {
         if (!elements[i].id) {
             continue;
+
         }
         var sortPart = elements[i].id.split("-");
         if (sortPart.length > 1) {
