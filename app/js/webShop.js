@@ -149,6 +149,6 @@ function show(which){
         return;
     }
     else {
-        which.style.display = "block"
+        which.style.display = "block";
     }
 }
