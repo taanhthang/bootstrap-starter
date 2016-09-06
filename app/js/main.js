@@ -40,7 +40,7 @@ DB.ready(function ()
         "<img  src=  '"+bildList+"' >"+
             "<div class='wrapper'>"+
             "<div class='caption produktShopName'>"+
-        "<span>"+namenList+"   " + preisList+"</span>"+
+        "<span>"+namenList+"   " + preisList+"€</span>"+
         "</div>"+
         "</div>"+
         "</a>"+
