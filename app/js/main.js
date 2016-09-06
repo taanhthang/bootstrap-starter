@@ -20,6 +20,7 @@ DB.connect(app).then(function() {
 
 
     }
+    /* Webshoppage*/
 DB.ready(function ()
 {
     DB.produkt.find().resultList(function (result)
