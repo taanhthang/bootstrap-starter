@@ -20,45 +20,96 @@ DB.connect(app).then(function() {
 
 
     }
+DB.ready(function ()
+{
+    DB.produkt.find().resultList(function (result)
+    {
 
-    DB.produkt.find().resultList(function (result) {
+        result.forEach(function (inh)
+        {
+            var bildList = inh.bild[0];
+            var idList = inh.id[0];
+            var artisList = inh.artist[0];
+            var namenList = inh.name[0];
+            var preisList = inh.preis[0];
+
+        $('#list')
+            .append(" <div id='" + idList + "'>"+
+            "<div class='aProdukt col-md-12'>"+
+            "<a class='thumbnail' href='/produktAnsicht.html'>"+
+        "<img  src=  '"+bildList+"' >"+
+            "<div class='wrapper'>"+
+            "<div class='caption produktShopName'>"+
+        "<span>"+namenList + preisList+"</span>"+
+        "</div>"+
+        "</div>"+
+        "</a>"+
+        "<a class='Lupe' href='"+bildList+"'data-lightbox='Shop:Shirt'><img src='https://thabefrijo-bq.global.ssl.fastly.net/v1/file/www/img/enlarge%20Lupe.png?BCB'/></a>"+
+        "<a href='/artistAnsicht.html'> Link to Artist</a>"+
+
+        "</div>"+
+            "</div>"
+            )
+        })
+    })
+});
+/*DB.ready(function () {
+    DB.Design.find().resultList(function (result) {
+        {
+            result.forEach(function (inf) {
+                var bildUrl = inf.gallery[0];
+                $('#testest')
+                    .append("<dic class='col-xs-6 col-sm-3'><div class='img-thumbnail img-responsive'><a href='" +
+                        bildUrl + "'data-lightbox='TestBild'><img src='" + bildUrl +
+                        "' width='300' height='200'></a> " +
+                        "<div class='desc'><button type='button' class='btnvote' aria-label='Left Align' id='Votebtn'>" +
+                        "<span class='glyphicon glyphicon-heart'></span> Vote " +
+                        "</button>" +
+                        "<button type='button' class='btnzoom' aria-lable='Right Align'>" +
+                        "<a href='" + bildUrl + "'>" +
+                        "<span class='glyphicon glyphicon-zoom-in'></span> Zoom in" +
+                        "</a></button></div></div>")
+            })
+        }
+    })
+})*/
+ /*   DB.produkt.find().resultList(function (result) {
         result.forEach(function (produkt) {
             console.log(produkt.name);
         });
     });
-function aendern(id,kat,atr) {
+/*function aendern(id,kat,atr) {
 
-    DB.produkt.load(id).then(function(produkt) {
+    DB.produkt.load(id).then(function (produkt) {
         produkt.kat = atr;
-        produkt.update({force: true}).then(function() {
-            //the todo was successfully persisted
+        produkt.update({force: true}).then(function () {
+
         });
     });
 
-}
+}*/
 
-   function ladeRunter() {
+
+  /* function ladeRunter() {
 
 
        var idList = [];
        var artistList = [];
        var preisList = [];
        var nameList = [];
-       var bildList = [];
 
 
        DB.produkt.find()
-           .ascending("id")
+           .ascending("collektion")
            .resultList(function(result)
            {
                result.forEach(function (produkt)
                {
-                  /* idList.push(produkt.produktid);
+                   idList.push(produkt.produktid);
                    artistList.push(produkt.artist);
                    preisList.push(produkt.preis);
                    nameList.push(produkt.name);
-                   bildList.push(produkt.bild); */
-                   console.log(result);
+                   return idList, artistList, preisList,nameList
 
 
                });
@@ -76,7 +127,7 @@ function aendern(id,kat,atr) {
             });
     }
 
-
+*/
 
 
 
