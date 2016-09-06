@@ -34,7 +34,7 @@ DB.ready(function ()
             var preisList = inh.preis;
 
         $('#list')
-            .append(" <div id='" + idList + "'>"+
+            .append(" <div id='" + idList + "'style='Display:block;'>"+
             "<div class='aProdukt col-md-12'>"+
             "<a class='thumbnail' href='/produktAnsicht.html'>"+
         "<img  src=  '"+bildList+"' >"+

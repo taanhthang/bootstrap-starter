@@ -25,7 +25,7 @@ function sortdivTops() {
     for (var i = 0; i < sortMe.length; i++) {
         container.appendChild(sortMe[i][1]);
         }
-    for(var j=1;j<100;j++) {
+    for(var j=1;j<4;j++) {
         hide(document.getElementById('/db/produkt/'+[j] +'-2'));
         hide(document.getElementById('/db/produkt/'+[j] +'-3'));
         hide(document.getElementById('/db/produkt/'+[j] +'-4'));
@@ -57,7 +57,7 @@ function sortdivShirt() {
         container.appendChild(sortMe[i][1]);
 
     }
-    for(var j=1;j<100;j++) {
+    for(var j=1;j<4;j++) {
         hide(document.getElementById('/db/produkt/'+[j] +'-1'));
         hide(document.getElementById('/db/produkt/'+[j] +'-3'));
         hide(document.getElementById('/db/produkt/'+[j] +'-4'));
@@ -89,7 +89,7 @@ function sortdivPullover() {
         container.appendChild(sortMe[i][1]);
 
     }
-    for(var j=1;j<100;j++) {
+    for(var j=1;j<4;j++) {
         hide(document.getElementById('/db/produkt/'+[j] +'-1'));
         hide(document.getElementById('/db/produkt/'+[j] +'-2'));
         hide(document.getElementById('/db/produkt/'+[j] +'-4'));
@@ -122,7 +122,7 @@ function sortdivJacken() {
 
     }
 
-    for(var j=1;j<100;j++) {
+    for(var j=1;j<4;j++) {
         hide(document.getElementById('/db/produkt/'+[j] +'-1'));
         hide(document.getElementById('/db/produkt/'+[j] +'-2'));
         hide(document.getElementById('/db/produkt/'+[j] +'-3'));
@@ -138,8 +138,11 @@ function hide(which) {
     {
         return;
     }
-    else {
+    if(which.style.display == "block") {
         which.style.display = "none";
+    }
+    else{
+        return;
     }
 }
 
@@ -148,7 +151,10 @@ function show(which){
     {
         return;
     }
-    else {
+    if(which.style.display == "none") {
         which.style.display = "block";
+    }
+    else{
+        return;
     }
 }
