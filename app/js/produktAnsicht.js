@@ -49,6 +49,7 @@ DB.ready(function () {
 
         /*hier werden die Bilder für die untere Leiste eingefügt*/
 
+
         $('#PApageIMG2')
             .append("<ol class='carousel-indicators mCustomScrollbar meartlab'>" +
                 "<li data-target='#carousel-custom' data-slide-to='0' class='active'><img src='http://images.asos-media.com/inv/media/8/2/3/3/5313328/print/image1xxl.jpg' alt='' /></li>" +
