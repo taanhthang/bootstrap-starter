@@ -12,6 +12,7 @@ DB.ready(function () {
             "<p style='width: 250px'>BLABLA</p>" +
             "</li>" +
             "</ol>")
+
     /*hier werden die Bilder eingefügt und die Fancybox eingebunden*/
     $('#PApageIMG')
         .append("<div class='carousel-inner '>" +
