@@ -49,7 +49,7 @@ DB.ready(function () {
                         "<option value='XL'>XL</option>" +
                         "</select></ul></ul></div><h3><a href='/warenkorb.html'><div >" +
                         "<button id ='warenkorb' type='button' class='btn' ><strong>In den Warenkorb</strong></button>" +
-                        "</div></a></h3><h3><a href='wunschzettel.html'><div>" +
+                        "</div></a></h3><h3><a href='wunschzettel.hbs'><div>" +
                         "<button id='wunschzettel'  type='button' class='btn'><strong>Wunschzettel</strong></button></div></a>" +
                         "</h3></td></tr></table>")
 });
