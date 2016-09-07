@@ -78,6 +78,7 @@ DB.ready(function () {
             "</a>"+
             "</h3>")
 
+    /* Die folgenden Function sind für die Vergrößerung fancybox*/
     $(function($){
         var addToAll = false;
         var gallery = true;
