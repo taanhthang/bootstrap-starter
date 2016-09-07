@@ -2,10 +2,6 @@
  * Created by Imperia on 06.09.2016.
  */
 DB.ready(function () {
-    var id = localStorage.getItem('productId');
-    DB.Produkt.load(id).thren(function (object) {
-
-
         $('#PApagetext')
             .append("<p><strong>Fließende Satinbluse mit Volant</strong></p>")
         $('#PApageIMG')
@@ -30,7 +26,7 @@ DB.ready(function () {
             "</div>"+
             "<div class='item'>"+
             "<img class='fancybox' src='http://images.asos-media.com/inv/media/1/3/0/8/5268031/image2xxl.jpg' />"+
-            "</div>")
+            "</div>");
 
         $('#PApageIMG2')
             .append("<ol class='carousel-indicators mCustomScrollbar meartlab'>"+
@@ -41,7 +37,7 @@ DB.ready(function () {
             "<li data-target='#carousel-custom' data-slide-to='4'><img src='http://images.asos-media.com/inv/media/5/2/1/3/4603125/gold/image1xxl.jpg' alt='' /></li>"+
             "<li data-target='#carousel-custom' data-slide-to='5'><img src='http://images.asos-media.com/inv/media/5/3/6/8/4948635/mink/image1xxl.jpg' alt='' /></li>"+
             "<li data-target='#carousel-custom' data-slide-to='6'><img src='http://images.asos-media.com/inv/media/1/3/0/8/5268031/image2xxl.jpg' alt='' /></li>"+
-            "</ol>")
+            "</ol>");
 
 
         $('#PApagerigth')
@@ -65,18 +61,17 @@ DB.ready(function () {
             "</ul>"+
             "</div>"+
             "<h3>"+
-            "<a href=''/warenkorb.html'>"+
+            "<a href='/warenkorb.html'>"+
             "<div>"+
             "<button id='warenkorb' type='button' class='btn'><strong>In den Warenkorb</strong></button>"+
         "</div>"+
         "</a>"+
         "</h3>"+
         "<h3>"+
-        "<a href=''/wunschzettel.html'>"+
+        "<a href='/wunschzettel.html'>"+
             "<div>"+
             "<button id='wunschzettel' type='button' class='btn'><strong>Wunschzettel</strong></button>"+
             "</div>"+
             "</a>"+
-            "</h3>")
-    });
+            "</h3>");
 });
