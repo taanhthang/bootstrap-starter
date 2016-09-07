@@ -5,7 +5,6 @@ DB.ready(function () {
 
     var id = localStorage.getItem('produktid');
     DB.produkt.load(id).then(function (object) {
-
         var bildList = object.bild[0];
         var idList = object.id;
         var artistList = object.artist;
@@ -16,10 +15,10 @@ DB.ready(function () {
 
         /*hier wird die Produktbeschreibung eingefügt*/
         $('#PApagetext')
-            .append("<p><strong>Fließende Satinbluse mit Volant</strong></p>" +
+            .append("<p><strong>"+namenList+"</strong></p>" +
                 "<ol>" +
                 "<li>" +
-                "<p style='width: 250px'>BLABLA</p>" +
+                "<p style='width: 250px'>"+beschreibungList+"</p>" +
                 "</li>" +
                 "</ol>")
 
@@ -64,7 +63,7 @@ DB.ready(function () {
         /* hier wird der Preis und die Verbindung zum Warenkorb und Wunschzettel zugefügt , vielleicht noch Änderungen nötig?*/
         $('#PApagerigth')
             .append("<div id='preis'>" +
-                "<h2> Preis </h2>" +
+                "<h2> "+preisList+" </h2>" +
                 "</div>" +
 
                 "<div id='groeße'>" +
