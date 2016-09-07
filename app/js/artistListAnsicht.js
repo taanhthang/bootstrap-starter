@@ -1,6 +1,11 @@
 /**
  * Created by Imperia on 02.09.2016.
  */
+
+
+/* hier so haben wir in statischen Bereich angefangen gehabt, ähnliche Funktionaliät wie der Webshop */
+
+
 /* SortJacken id"-4", alle Id by hide müssen vergeben sein*/
 function sortdivCA() {
 

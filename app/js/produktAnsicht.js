@@ -6,7 +6,12 @@ DB.ready(function () {
 
     /*hier wird die Produktbeschreibung eingefügt*/
     $('#PApagetext')
-        .append("<p><strong>Fließende Satinbluse mit Volant</strong></p>")
+        .append("<p><strong>Fließende Satinbluse mit Volant</strong></p>" +
+            "<ol>" +
+            "<li>" +
+            "<p style='width: 250px'>BLABLA</p>" +
+            "</li>" +
+            "</ol>")
     /*hier werden die Bilder eingefügt und die Fancybox eingebunden*/
     $('#PApageIMG')
         .append("<div class='carousel-inner '>" +
