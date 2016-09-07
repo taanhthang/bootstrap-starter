@@ -11,8 +11,23 @@
 durch einwirken des Users ausgeführt
  */
 
+/*/db/produkt/1-2 so sieht eine unserer IDs in der DB aus wobei hintern - die Zahlen 1 bis 4 für die jeweilige Kategorie
+1 Tops
+2 Shirt
+3 Pullover
+4 Jacken darstellt.
+Die Zahl vor den - ist der Zähler , damit die ID eindeutig ist
+ZUM Beispiel:
 
-/* SortTops id"-1", show id am ende */
+ /db/produkt/1-2  : Erstes Shirt
+ /db/produkt/2-2  : Zweites Shirt
+ /db/produkt/2-2  : Drittes Shirt
+ /db/produkt/2-2  : Viertes Shirt
+
+Es geht warscheinlich schöner und besser , aber für die Folgenden Funktionen funktioniert das und wir hatten nur das
+ Ziel es überhauopt zum Laufen zu bringen , da sich bei unsere Gruppe die Vorerfahrung auf SE1 und Se2 begrenzen*/
+
+/* Sortiert Produkte nach Tops und vesteckt alle anderen */
 function sortdivTops() {
 
     var container = document.getElementById("list");
@@ -43,7 +58,7 @@ function sortdivTops() {
 }
 
 
-/* SortShirt id"-2", alle Id by hide müssen vergeben sein*/
+/* Sortiert Produkte nach Shirt und vesteckt alle anderen */
 function sortdivShirt() {
 
     var container = document.getElementById("list");
@@ -74,7 +89,7 @@ function sortdivShirt() {
 }
 
 
-/* SortPullover id"-3", alle Id by hide müssen vergeben sein*/
+/* Sortiert Produkte nach Pullover und vesteckt alle anderen */
 function sortdivPullover() {
 
     var container = document.getElementById("list");
@@ -105,7 +120,7 @@ function sortdivPullover() {
 
 }
 
-/* SortJacken id"-4", alle Id by hide müssen vergeben sein*/
+/* Sortiert Produkte nach JAcken und vesteckt alle anderen */
 function sortdivJacken() {
 
     var container = document.getElementById("list");
