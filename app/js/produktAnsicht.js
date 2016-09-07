@@ -64,7 +64,7 @@ DB.ready(function () {
         /* hier wird der Preis und die Verbindung zum Warenkorb und Wunschzettel zugefügt , vielleicht noch Änderungen nötig?*/
         $('#PApagerigth')
             .append("<div id='preis'>" +
-                "<h2> "+preisList+" </h2>" +
+                "<h2> "+preisList+" €</h2>" +
                 "</div>" +
 
                 "<div id='groeße'>" +
@@ -115,9 +115,18 @@ DB.ready(function () {
                 titlePosition: titlePosition
             });
         });
-        $.noConflict();
+
 
 
     });
+
+
+    add_filter('woocommerce_get_availability', 'availability_filter_func');
+
+    function availability_filter_func($availability)
+    {
+        $availability['availability'] = str_ireplace('Out of stock', 'Sold', $availability['availability']);
+        return $availability;
+    }
 });
 
