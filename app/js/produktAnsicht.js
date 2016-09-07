@@ -61,9 +61,9 @@ DB.ready(function () {
             "<ul>" +
             "<ul>" +
             "<p id='Groesse'><strong>Größe</strong></p>" +
-            "<select id='Groesse' name='size'>" +
+            "<select id='Groesse' class='form-control'>" +
             "<option value='Wählen'>Wählen</option>" +
-            "<option value='XS'>XS</option>" +
+            "<option disabled value='XS'>XS</option>" +
             "<option value='S'>S</option>" +
             "<option value='M'>M</option>" +
             "<option value='L'>L</option>" +
