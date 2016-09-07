@@ -33,7 +33,7 @@ DB.ready(function () {
             $('#list')
                 .append(" <div id='" + idList + "'style='Display:block;'>" +
                     "<div class='aProdukt col-md-12'>" +
-                    "<a class='thumbnail' href='/produktAnsicht.html'onclick= 'localStorage.setItem('produktid','" + idList + "')'>" +
+                    "<a class='thumbnail' href='/produktAnsicht.html?id=" + idList + "'>" +
                     "<img  src=  '" + bildList + "' >" +
                     "<div class='wrapper'>" +
                     "<div class='caption produktShopName'>" +
@@ -79,4 +79,9 @@ function func2(obj) {
     divMoreInfo.style.visibility = "hidden";
 }
 
-
+function iduebergabe(idList)
+{
+    localStorage.setItem('produktid', idList );
+    console.log("Hallo");
+    window.location = "/produktAnsicht.html";
+}
