@@ -9,67 +9,74 @@ DB.ready(function () {
     });
 
     DB.produkt.load(params.id).then(function(object) {
-
-            var bildList = object.bild[0];
-            var idList = object.id;
-            var artistList = object.artist;
-            var namenList = object.name;
-            var preisList = object.preis;
+            var groesse = [];
+            var bild= [];
+            object.groesse.forEach(function (entry) {
+                groesse.push(entry);
+                console.log(groesse);
+            });
+            object.bild.forEach(function (pic) {
+            bild.push(pic);
+            console.log(bild);
+            });
+            var namen = object.name;
+            var preis = object.preis;
+            var beschreibung = object.beschreibung;
 
 
 
             /*hier wird die Produktbeschreibung eingefügt*/
         $('#PApagetext')
-            .append("<p><strong>bkbbb</strong></p>" +
+            .append("<p><strong>"+namen+"</strong></p>" +
                 "<ol>" +
                 "<li>" +
-                "<p style='width: 250px'>bllla</p>" +
+                "<p style='width: 250px'>"+beschreibung+"</p>" +
                 "</li>" +
-                "</ol>")
+                "</ol>");
 
         /*hier werden die Bilder eingefügt und die Fancybox eingebunden*/
         $('#PApageIMG')
             .append("<div class='carousel-inner '>" +
                 "<div class='item active'>" +
-                "<img  class='fancybox' src='http://images.asos-media.com/inv/media/8/2/3/3/5313328/print/image1xxl.jpg'  />" +
+                "<img  class='fancybox' src='"+bild[0]+"'  />" +
                 "</div>" +
                 "<div class='item'  >" +
-                "<img class='fancybox' src='http://images.asos-media.com/inv/media/8/2/3/3/5313328/image2xxl.jpg'  />" +
+                "<img class='fancybox' src='"+bild[1]+"'  />" +
                 "</div>" +
                 "<div class='item'>" +
-                "<img class='fancybox' src='http://images.asos-media.com/inv/media/8/2/3/3/5313328/image3xxl.jpg' />" +
+                "<img class='fancybox' src='"+bild[2]+"' />" +
                 "</div>" +
                 "<div class='item'>" +
-                "<img  class='fancybox' src='http://images.asos-media.com/inv/media/3/6/7/0/4850763/multi/image1xxl.jpg' />" +
+                "<img  class='fancybox' src='"+bild[3]+"' />" +
                 "</div>" +
                 "<div class='item'>" +
-                "<img class='fancybox' src='http://images.asos-media.com/inv/media/5/2/1/3/4603125/gold/image1xxl.jpg' />" +
+                "<img class='fancybox' src='"+bild[4]+"' />" +
                 "</div>" +
                 "<div class='item'>" +
-                "<img class='fancybox' src='http://images.asos-media.com/inv/media/5/3/6/8/4948635/mink/image1xxl.jpg' />" +
+                "<img class='fancybox' src='"+bild[5]+"' />" +
                 "</div>" +
                 "<div class='item'>" +
-                "<img class='fancybox' src='http://images.asos-media.com/inv/media/1/3/0/8/5268031/image2xxl.jpg' />" +
-                "</div>")
+                "<img class='fancybox' src='"+bild[6]+"' />" +
+                "</div>");
 
         /*hier werden die Bilder für die untere Leiste eingefügt*/
 
 
         $('#PApageIMG2')
             .append("<ol class='carousel-indicators mCustomScrollbar meartlab'>" +
-                "<li data-target='#carousel-custom' data-slide-to='0' class='active'><img src='http://images.asos-media.com/inv/media/8/2/3/3/5313328/print/image1xxl.jpg' alt='' /></li>" +
-                "<li data-target='#carousel-custom' data-slide-to='1'><img src='http://images.asos-media.com/inv/media/8/2/3/3/5313328/image2xxl.jpg' alt='' /></li>" +
-                "<li data-target='#carousel-custom' data-slide-to='2'><img src='http://images.asos-media.com/inv/media/8/2/3/3/5313328/image3xxl.jpg' alt='' /></li>" +
-                "<li data-target='#carousel-custom' data-slide-to='3'><img src='http://images.asos-media.com/inv/media/3/6/7/0/4850763/multi/image1xxl.jpg' alt='' /></li>" +
-                "<li data-target='#carousel-custom' data-slide-to='4'><img src='http://images.asos-media.com/inv/media/5/2/1/3/4603125/gold/image1xxl.jpg' alt='' /></li>" +
-                "<li data-target='#carousel-custom' data-slide-to='5'><img src='http://images.asos-media.com/inv/media/5/3/6/8/4948635/mink/image1xxl.jpg' alt='' /></li>" +
-                "<li data-target='#carousel-custom' data-slide-to='6'><img src='http://images.asos-media.com/inv/media/1/3/0/8/5268031/image2xxl.jpg' alt='' /></li>" +
-                "</ol>")
+                "<li data-target='#carousel-custom' data-slide-to='0' class='active'><img src='"+bild[0]+"' alt='' /></li>" +
+                "<li data-target='#carousel-custom' data-slide-to='1'><img src='"+bild[1]+"' alt='' /></li>" +
+                "<li data-target='#carousel-custom' data-slide-to='2'><img src='"+bild[2]+"' alt='' /></li>" +
+                "<li data-target='#carousel-custom' data-slide-to='3'><img src='"+bild[3]+"' alt='' /></li>" +
+                "<li data-target='#carousel-custom' data-slide-to='4'><img src='"+bild[4]+"' alt='' /></li>" +
+                "<li data-target='#carousel-custom' data-slide-to='5'><img src='"+bild[5]+"' alt='' /></li>" +
+                "<li data-target='#carousel-custom' data-slide-to='6'><img src='"+bild[6]+"' alt='' /></li>" +
+                "</ol>");
 
         /* hier wird der Preis und die Verbindung zum Warenkorb und Wunschzettel zugefügt , vielleicht noch Änderungen nötig?*/
         $('#PApagerigth')
             .append("<div id='preis'>" +
-                "<h2> Preis </h2>" +
+                "<h2> "+preis+"€ </h2>" +
                 "</div>" +
 
                 "<div id='groeße'>" +
@@ -100,7 +107,7 @@ DB.ready(function () {
                 "<button id='wunschzettel' type='button' class='btn'><strong>Wunschzettel </strong></button>" +
                 "</div>" +
                 "</a>" +
-                "</h3>")
+                "</h3>");
 
         /* Die folgenden Function sind für die Vergrößerung fancybox*/
         $(function ($) {
