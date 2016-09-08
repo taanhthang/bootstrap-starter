@@ -23,7 +23,8 @@ DB.ready(function () {
 
 
 
-            /*hier wird die Produktbeschreibung eingefügt*/
+
+        /*hier wird die Produktbeschreibung eingefügt*/
         $('#PApagetext')
             .append("<p><strong>"+namen+"</strong></p>" +
                 "<ol>" +
@@ -77,17 +78,17 @@ DB.ready(function () {
                 "<h2> "+preis+"€ </h2>" +
                 "</div>" +
 
-                "<div id='groeße'>" +
+                "<div>" +
                 "<ul>" +
                 "<ul>" +
                 "<p id='Groesse'><strong>Größe</strong></p>" +
-                "<select id='Groesse' name='size'>" +
+                "<select id ='Groesse' name='size'>" +
                 "<option value='Wählen'>Wählen</option>" +
-                "<option value='XS'>XS</option>" +
-                "<option value='S'>S</option>" +
-                "<option value='M'>M</option>" +
-                "<option value='L'>L</option>" +
-                "<option value='XL'>XL</option>" +
+                "<option id ='1' value='XS'>XS</option>" +
+                "<option id='2' value='S'>S</option>" +
+                "<option id='3' value='M'>M</option>" +
+                "<option id='4' value='L'>L</option>" +
+                "<option id='5' value='XL'>XL</option>" +
                 "</select>" +
                 "</ul>" +
                 "</ul>" +
@@ -106,6 +107,39 @@ DB.ready(function () {
                 "</div>" +
                 "</a>" +
                 "</h3>");
+
+
+
+        $( "#1" ).prop( "disabled", true );
+        $( "#2" ).prop( "disabled", true );
+        $( "#3" ).prop( "disabled", true );
+        $( "#4" ).prop( "disabled", true );
+        $( "#5" ).prop( "disabled", true );
+
+        $(function () {
+            for (var i = 0; i < groesse.length; i++) {
+                 if (groesse[i] == "XS") {
+                     $("#1").prop("disabled", false);
+
+                 }
+                 if(groesse[i] == "S"){
+
+                     $("#2").prop("disabled", false);
+                 }
+                if(groesse[i] == "M"){
+
+                    $("#3").prop("disabled", false);
+                }
+                if(groesse[i] == "L"){
+
+                    $("#4").prop("disabled", false);
+                }
+                if(groesse[i] == "XL"){
+
+                    $("#5").prop("disabled", false);
+                }
+            }
+        });
 
         /* Die folgenden Function sind für die Vergrößerung fancybox*/
         $(function ($) {
