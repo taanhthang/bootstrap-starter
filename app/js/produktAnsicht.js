@@ -13,11 +13,9 @@ DB.ready(function () {
             var bild= [];
             object.groesse.forEach(function (entry) {
                 groesse.push(entry);
-                console.log(groesse);
             });
             object.bild.forEach(function (pic) {
             bild.push(pic);
-            console.log(bild);
             });
             var namen = object.name;
             var preis = object.preis;
