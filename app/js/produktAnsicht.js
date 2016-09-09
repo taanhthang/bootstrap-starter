@@ -141,6 +141,7 @@ DB.ready(function () {
                 if(groesse[i] == null)    {
 
                 }        }
+
         });
 
         /* Die folgenden Function sind für die Vergrößerung fancybox*/
