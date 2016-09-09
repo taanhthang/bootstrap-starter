@@ -138,7 +138,9 @@ DB.ready(function () {
 
                     $("#5").prop("disabled", false);
                 }
-            }
+                if(groesse[i] == null)    {
+
+                }        }
         });
 
         /* Die folgenden Function sind für die Vergrößerung fancybox*/
